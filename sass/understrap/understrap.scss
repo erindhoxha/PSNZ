@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+$mainColor: #238686;
+body {
+  font-family:'Titillium Web';
+}
+
+// Some basic padding for all wrappers
+.wrapper {
+  padding: $grid-gutter-width 0; }
+
+// Reset hero wrapper padding to 0
+#wrapper-hero { padding: 0px !important; }
+
+// Adding basic WordPress classes to pass the WordPress.org tests
+.sticky,
+.gallery-caption,
+.bypostauthor {
+  font-size: inherit;
+}
+
+// Separate sticky wrapper from main content
+.wrapper#wrapper-sticky { border-bottom: 1px solid $gray-300; }
+
+// Adding some contrast background color to footer full widget
+#wrapper-footer-full,
+#wrapper-static-hero { background-color: $gray-200; }
+
+// Necessary WP classes
+.wp-caption { font-size: inherit; }
+
+.wp-caption-text { font-size: inherit; }
+
+.screen-reader-text { @extend .sr-only; }
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter { @extend .mx-auto; }
+
+// Post design
+.entry-footer span { padding-right: 10px; }
+
+// Limit featured image size to 100%
+img.wp-post-image,
+article img,
+figure,
+img,
+#secondary img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Skip to content link
+a.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+}
+
+// Reset Jumbotron default margin
+.jumbotron { margin-bottom: 0px; }
+
+// Dropdown translation
+.navbar-dark .navbar-nav .dropdown-menu .nav-link{
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  color: $dropdown-link-color !important;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background: none; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  @include hover-focus {
+    color: $dropdown-link-hover-color !important;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color !important;
+    text-decoration: none;
+    background-color: $dropdown-link-active-bg;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color !important;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+.navbar-light .navbar-brand a {
+     color: $navbar-light-active-color;
+
+    @include hover-focus {
+      color: $navbar-light-active-color;
+    }
+}
+
+.navbar-dark .navbar-brand a {
+    color: $navbar-dark-active-color;
+
+    @include hover-focus {
+      color: $navbar-dark-active-color;
+    }
+}
+
+.navbar h1 { font-weight: $font-weight-normal; }
+
+.navbar {
+  background-color:black;
+}
+.header-index {
+  width:100%;
+  height:80vh;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#wrapper-navbar {
+  top:0;
+  z-index:2;
+  width:100%;
+}
+.text-box {
+  width:100%;
+  color:white;
+  padding:20px;
+  padding-left:80px;
+}
+.text-box h1 {
+  padding:0px;
+}
+.img-right-img {
+  width:500px;
+}
+.button-main-page {
+  background-color:black;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  transition:0.3s ease;
+}
+.button-main-page:hover {
+  background-color:rgba(0,0,0,0.8);
+}
+.overlay-header {
+  background-color: rgba(0,0,0,0.95);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M29 58.58l7.38-7.39A30.95 30.95 0 0 1 29 37.84a30.95 30.95 0 0 1-7.38 13.36l7.37 7.38zm1.4 1.41l.01.01h-2.84l-7.37-7.38A30.95 30.95 0 0 1 6.84 60H0v-1.02a28.9 28.9 0 0 0 18.79-7.78L0 32.41v-4.84L18.78 8.79A28.9 28.9 0 0 0 0 1.02V0h6.84a30.95 30.95 0 0 1 13.35 7.38L27.57 0h2.84l7.39 7.38A30.95 30.95 0 0 1 51.16 0H60v27.58-.01V60h-8.84a30.95 30.95 0 0 1-13.37-7.4L30.4 60zM29 1.41l-7.4 7.38A30.95 30.95 0 0 1 29 22.16 30.95 30.95 0 0 1 36.38 8.8L29 1.4zM58 1A28.9 28.9 0 0 0 39.2 8.8L58 27.58V1.02zm-20.2 9.2A28.9 28.9 0 0 0 30.02 29h26.56L37.8 10.21zM30.02 31a28.9 28.9 0 0 0 7.77 18.79l18.79-18.79H30.02zm9.18 20.2A28.9 28.9 0 0 0 58 59V32.4L39.2 51.19zm-19-1.4a28.9 28.9 0 0 0 7.78-18.8H1.41l18.8 18.8zm7.78-20.8A28.9 28.9 0 0 0 20.2 10.2L1.41 29h26.57z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  height:100%;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:100vw;
+}
+.description-paragraph {
+  font-size:18px;
+}
+.img-landing-page {
+  width:500px;
+}
+.purchase-btn {
+  background-color:black;
+  padding:10px 20px;
+  color:white;
+  transition:0.3s ease-in-out;
+}
+.purchase-btn:hover {
+  background-color:white;
+  border:2px solid black;
+  color:black;
+}
+.purchase-btn:focus {
+  outline:none;
+}
+.img-cameras {
+  width: 100%;
+  margin-top:20px;
+  height: 250px;
+  object-fit: contain;
+}
+a {
+  color:$mainColor;
+}
+.active {
+  color:$mainColor;
+}
+a:hover {
+  color:$mainColor;
+}
+.post-meta {
+  padding-left:0px;
+  background-color:rgba(231, 56, 56, 0.7);
+  width:100%;
+  padding:10px;
+  color:white;
+  li {
+    list-style-type: none;
+  }
+}
+.wpcf7-list-item.first.last {
+  margin:10px 0px 10px 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  #post-35 {
+    width:80%;
+    margin:0 auto;
+  }
+}
+
+.btn-read-more {
+  background-color: black;
+  color:white;
+  border-radius:0px;
+  transition:0.3s ease-in-out;
+  border:2px solid black;
+}
+.btn-read-more:hover {
+  background-color:white;
+  color:black;
+  border:2px solid black;
+}
+.camera-banner {
+  height:400px;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  object-fit:cover;
+}
+.camera-banner-image {
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+.camera-banner {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-camera-box {
+  font-weight:500;
+  position:absolute;
+  background-color:rgba(255,255,255,0.8);
+  padding:20px;
+}
+
+.ad-banner {
+  height:400px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .text-box-ad {
+    position:absolute;
+    color:white;
+  }
+  img {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+  }
+}
+.site-main-about-us {
+  article {
+    width:60%;
+    margin:0 auto;
+  }
+}
+.loader {
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  z-index:9;
+  background-color:white;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  img {
+    width:350px;
+  }
+}
+// CSS FOR FILTERING
+
+
+
+.portfolioFilter {
+  padding: 15px 0;
+  margin:10px;
+}
+
+.portfolioFilter a {
+  margin:10px 2px 10px 2px;
+  color: #666;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 50px;
+  display: inline-block;
+  transition:0.3s ease-in-out;
+}
+.portfolioFilter a:hover {
+  background-color:black;
+  color:white !important;
+}
+
+.portfolioFilter a.current {
+  background: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: #f9f9f9;
+}
+.portfolioContainer{
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
