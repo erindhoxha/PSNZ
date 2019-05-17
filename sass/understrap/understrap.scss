@@ -437,10 +437,23 @@ a:hover {
 }
 
 .type-movies.status-publish.has-post-thumbnail, .container.navigation.post-navigation {
-  width:60%;
+  width:80%;
   margin:0 auto;
   img {
-    width:80%;
-    margin:50px auto;
+    width:100%;
+    margin:10px auto;
+  }
+}
+.single-movies {
+  .single-img {
+    width:50% !important;
+    margin:50px auto !important;
+  }
+  article {
+    text-align:center;
+  }
+  .row.nav-links.justify-content-between {
+    text-align:center;
+    justify-content: center !important;
   }
 }

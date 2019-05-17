@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 <div class="loader">
-	<img src="http://localhost/GOT-main/wp-content/uploads/2019/05/camera.gif">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/camera.gif">
 </div>
 <body <?php body_class(); ?>>
 

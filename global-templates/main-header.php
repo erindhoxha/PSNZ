@@ -14,7 +14,7 @@
 			<button type="button" class="button-main-page">See more</button>
 		</div>
 		<div class="img-right col-lg-7 rellax text-center" data-rellax-speed="5">
-			<img class="img-right-img" src="http://localhost/GOT-main/wp-content/uploads/2019/05/Photo-Camera-PNG-Pic.png">
+			<img class="img-right-img" src="<?php echo get_template_directory_uri(); ?>/assets/Photo-Camera-PNG-Pic.png">
 		</div>
 	</div><!-- .entry-content -->
 </div>
